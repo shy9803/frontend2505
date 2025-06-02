@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+/* 공통 */
+.listpage {
+  margin: 15px auto;
+}
+
+.listpage table, .listpage > form {
+  width: 100%;
+}
+
+/* 리스트 조회 */
+.tableheight {height: 420px;}
+
+.listpage table {
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.listpage caption {
+  line-height: 29px;
+  text-align: right;
+}
+
+.listpage thead tr th, .listpage tbody tr td {
+  text-align: center;
+}
+.listpage thead tr th {
+  padding: 14px 5px;
+}
+.listpage thead tr th:last-child {width: 150px;}
+
+.listpage tbody tr td {
+  padding: 10px;
+  border-bottom: 1px solid #afafaf;
+}
+.listpage button {
+  border: none;
+  color: #fff;
+  padding: 6px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 3px;
+  transition: 0.3s;
+}
+
+.listpage .list_btn {
+  margin: 8px 2% 2px 1%;
+  width: 97%;
+  text-align: right;
+}
+
+/* 수정, 등록 */
+.listpage > form p {
+  padding: 8px 2px;
+}
+.listpage > form label {
+  display: inline-block;
+  width: 15%;
+}
+.listpage > form input {
+  width: 80%;
+  padding: 6px;
+}
+
+/* 등록 */
+.listpage select {
+  width: 81.5%;
+  padding: 6px;
+}
+
+/* 페이지 네이션 */
+.pagination {
+  text-align: center;
+  margin: 10px 0 0 0;
+}
+.pagination > button {
+  margin-right: 5px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

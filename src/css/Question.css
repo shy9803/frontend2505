@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+.quest_form_out {
+  margin: 15px auto;
+}
+.question > h2 {
+  font-size: 20px;
+  line-height: 40px;
+  text-align: right;
+  margin-right: 5px;
+}
+
+.qform {display: flex; margin-bottom: 10px;}
+
+.left_form, .right_form {
+  margin: 0px 5px;
+  width: 50%;
+}
+.left_form label, .right_form label {
+  display: inline-block;
+  width: 80px;
+  margin: 3px 0px;
+}
+.left_form input, .right_form textarea {
+  width: 100%;
+  padding: 8px 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.left_form p {
+  margin: 6px 0;
+}
+
+.right_form label {
+  vertical-align: top; /* 수직 정렬 설정 */
+}
+.right_form textarea {
+  resize: vertical;
+  min-height: 178px;
+}
+
+.right_form .limit_txt p {
+  text-align: right;
+}
+.limit_txt span {color: #ac1a1a;}
+
+.chkbox,.sendbtn {width: 98%; margin: 0 auto;}
+
+.chkbox input {
+  margin-right: 10px;
+}
+
+.sendbtn {
+  text-align: right;
+}
+.sendbtn input {
+  border: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  background-color: rgb(95, 95, 95);
+  color: #eee;
+  cursor: pointer;
+}
+.sendbtn input:hover {
+  background-color: rgb(124, 124, 124);
+}

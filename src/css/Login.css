@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+.login_form {
+  width: 100%;
+  margin: 15px auto;
+}
+.login_form > h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+.login_form p {
+  width: 450px;
+  margin: 15px auto;
+}
+
+.login_form label {
+  display: inline-block;
+  width: 80px;
+}
+.login_form input[type=text], .login_form input[type=password] {
+  width: calc(100% - 80px - 8px*2 - 1px*2);
+  background: #fefefe;
+  border: 1px solid #cecece;
+}
+.login_form input {
+  padding: 12px 8px;
+  border: none;
+  border-radius: 5px;
+}
+.login_form input[type=submit] {
+  background: #d8447d;
+  width: 100%;
+  cursor: pointer;
+  color: #fefefe;
+}
+.login_form input[type=submit]:hover {
+  background: #f1699d;
+}
+.login_form input[type=text]:focus, .login_form input[type=password]:focus {
+  border-color: #f1699d;
+  outline: none;
+}
+
+.login_form .btn-group {
+  text-align: center;
+}
+.login_form .btn-group a {
+  padding: 0 10px;
+}
+.login_form .btn-group a:hover {
+  color: #f1699d;
+}
+
+/* 기타 입력 */
+.login_form dl, .login_form pre {
+  width: 450px;
+  margin: 0px auto;
+  border: 1px solid #cecece;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.login_form dl {
+  margin-top: 50px;
+}
+.login_form dt {
+  font-weight: bold;
+  font-size: 14px;
+}
+.login_form dd {
+  text-indent: 6px;
+  font-size: 13px;
+}
+
+.login_form pre {
+  text-wrap: wrap;
+}

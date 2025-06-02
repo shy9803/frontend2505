@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+/* Login2 & Register2 */
+.log2 {
+  background: linear-gradient(0deg, #580202a1 38%, #99080825 100%);
+}
+.log2 h2 {
+  text-align: center;
+  padding-top: 25px;
+}
+
+.log2 > form {
+  width: 500px;
+  margin: 0px auto;
+  padding: 25px 0 10px 0;
+}
+
+.log2 > form p {
+  width: 100%;
+  text-align: center;
+}
+.log2 > form label {
+  display: none;
+}
+
+.log2 > form input {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  background: #efefef;
+  padding: 15px 10px;
+  margin: 8px 0;
+  border-radius: 3px;
+}
+.log2 > form input[type=submit], .log2 > form input[type=reset] {
+  font-size: 14px;
+  padding: 13px;
+  cursor: pointer;
+}
+.log2 > form input[type=submit] {
+  background: #990808;
+  color: #e1e1e0;
+}
+
+.log2 > form input[type=text]:focus, .log2 > form input[type=password]:focus, 
+.log2 > form input[type=tel]:focus, .log2 > form input[type=email]:focus {
+  outline: none;
+  background-color: #fcf0f0;
+}
+.log2 > form input[type=submit]:hover {
+  background: #580202;
+}
+
+/* 로그인 해당 */
+.log2 > form .log_mnu {
+  margin: 20px 0;
+}
+
+.log2 > form .log_mnu a::after {
+  content: '';
+  display: inline-block;
+  border-bottom: 1px solid #3f3f3f;
+  width: 15px;
+  transform: rotate(90deg);
+  margin: 5px;
+}
+.log2 > form .log_mnu a:last-child:after {
+  border-bottom: none;
+}
+
+.log2 > form .log_mnu a:hover {
+  color: #580202;
+  text-decoration: underline;
+}
+
+.log2 > form .log_mnu::after {
+  display: block;
+  content: '';
+  border-bottom: 1px solid #333;
+  margin-top: 25px;
+}
+
+.log2 > form h3 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.log2 > form li {
+  text-align: center;
+  margin: 8px 0;
+}
+.log2 > form li a {
+  display: inline-block;
+  width: 100%;
+  height: 46px;
+  border-radius: 3px;
+}
+.log2 > form li img {
+  width: 37.46%;
+}
+
+/* 각 로그인 버튼 색상(자사 개발자 페이지 참고) */
+.log2 > form li:first-child a {
+  background: #FEE500;
+}
+.log2 > form li:nth-child(2) a {
+  background: #03C75A;
+}
+.log2 > form li:last-child a {
+  background: #fff;
+}
+
+/* 회원가입 해당 */
+.log2 > form input[type=reset] {
+  background: #5c5c5c;
+  color: #fff;
+}
+.log2 > form input[type=reset]:hover {
+  background: #a3a3a3;
+  color: #fff;
+}
+
+/* 기타 */
+.log2_info {
+  width: 80%;
+  margin: 0px auto;
+  border: 1px solid #580202;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.log2_info > h3 {
+  text-align: center;
+  margin: 15px 0;
+  color: #580202;
+}
+.log2_info li {
+  margin-left: 30px;
+  list-style: disc;
+}
+.log2_info pre {
+  border: 1px solid #ccc;
+  text-wrap: wrap;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.log2::after {
+  content: '';
+  display: block;
+  padding: 10px 0;
+}

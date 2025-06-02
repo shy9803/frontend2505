@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+/* Goods */
+.goods table > thead {
+  background: #56c54c;
+}
+.goods button, .goodsform button {
+  background: #1f6b18;
+}
+.goods button:hover, .goodsform button:hover {
+  background: #56c54c;
+  color: #333;
+}
+
+/* Books */
+.books table > thead {
+  background: #b8b8f0;
+}
+.books button, .booksform button {
+  background: #2d2d8d;
+}
+.books button:hover, .booksform button:hover {
+  background: #b8b8f0;
+  color: #333;
+}
+
+/* Fruits */
+.fruits table > thead {
+  background: #dfb678;
+}
+.fruits button, .fruitsform button {
+  background: #bd8430;
+}
+.fruits button:hover, .fruitsform button:hover {
+  background: #dfb678;
+  color: #333;
+}

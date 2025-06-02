@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+/* 공통 */
+* {margin: 0; padding: 0;}
+ul, ol, li {list-style: none;}
+body {color: #333;}
+a {text-decoration: none; color: #333;}
+
+/* 헤더, 메인, 푸터 */
+header, main, footer {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* 헤더 */
+header > h1 {
+  font-size: 24px;
+  padding: 14px 2px;
+}
+header > nav {
+  background: #d8d8d8;
+  height: 44px;
+}
+header > nav ul {
+  display: flex;
+  height: inherit;
+  align-items: center;
+}
+header > nav a {
+  padding: 10px;
+  margin: 0px 3px;
+}
+header > nav a:hover {
+  color: #474747;
+  font-weight: bold;
+  border-bottom: 3px solid #474747;
+}
+header .num_count {
+  display: inline-block;
+  margin-left: 6px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 22px;
+  font-weight: bold;
+}
+
+/* 메인 */
+main {
+  max-width: 1200px;
+}
+
+/* 푸터 */
+footer {
+  background: #474747;
+  color: #fff;
+}
+footer > address {
+  font-style: normal;
+  text-align: center;
+  line-height: 50px;
+}
