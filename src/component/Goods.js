@@ -17,7 +17,8 @@ function Goods(props) {
     //React비동기 통신
     axios
     //DB에서 json데이터를 불러온다.
-    .get('https://backend:9070/goods')
+    .get('https://port-0-backend-mbiobig1cd0dc4c0.sel4.cloudtype.app')
+      //('https://backend:9070/goods')
     //성공시 데이터를 변수에 저장
     .then(res=>{
       setData(res.data);
