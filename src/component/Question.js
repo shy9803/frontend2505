@@ -16,19 +16,10 @@ const Question = () => {
 
   const { setQuestionCount } = useContext(AlertContext);
 
-  // 글자수 제한 (개별 추가)
-  let [inputCount, setInputCount] = useState(0);
-
   // 2. 입력 양식에 사용자가 입력시 함수 호출
   const handleChange = (e) => {
     const{name, value} = e.target;
     setFormData(prev => ({...prev, [name]: value}));
-
-    // 글자수 byte로 변환 (한글 1글자 3byte, 영어 1byte)
-    // setInputCount(e.target.value.replace(/[\0-\x7f]|([0-\u07ff]|(.))/g, "$&$1$2").length);
-    
-    // 글자수 제한
-    setInputCount(e.target.value.length);
   }
 
   // 3. 입력 완료 or 전송하기 or send 버튼 클릭시 실행되는 함수
@@ -73,9 +64,6 @@ const Question = () => {
             <textarea rows='10' cols='50' name='txtbox' id='txtbox' placeholder='내용을 입력해주세요 (최대 300자)' value={formData.txtbox} onChange={handleChange} required 
             maxLength={300} // 300자 제한 추가
             ></textarea>
-            <div className='limit_txt'>
-              <p><span>{inputCount}</span> / 300 자</p>
-            </div>
           </div>
         </div>
 
@@ -93,6 +81,3 @@ const Question = () => {
 }
 
 export default Question;
-
-// 글자수 제한 참고 사이트
-// https://velog.io/@posinity/리액트-input-글자수-실시간-표시-글자수-제한-그-이상-못쓰게-하기
