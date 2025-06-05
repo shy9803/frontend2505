@@ -1,6 +1,7 @@
 // Register.js
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function Register(props) {
   // 1. 변수 선언
@@ -12,6 +13,8 @@ function Register(props) {
 
   const [error, setError] = useState(''); // 에러시 출력 변수
   const [success, setSuccess] = useState(''); // 성공시 출력 변수//불필요한 내용
+
+  const navigate = useNavigate();
 
   // 2. 사용자가 입력 양식에 입력을 하면 실행되는 함수
   const handleChange = e => {
@@ -31,13 +34,17 @@ function Register(props) {
       return;
     }
     try { // DB 서버와 통신이 잘 되면 POST 방식으로 id, pw를 넘긴다.
-      await axios.post('https://port-0-backend-mbiobig1cd0dc4c0.sel4.cloudtype.app/register', {
+      await axios.post('http://localhost:9070/register', {
         username: form.username,
         password: form.password
       });
 
-      setSuccess('회원가입이 성공적으로 완료되었습니다.');
+      setSuccess('회원가입이 성공적으로 완료되었습니다.\n3초 후에 로그인 페이지로 이동합니다.');
       setForm({ username: '', password: '', confirmPassword: '' });
+
+      setTimeout(() => {
+        navigate('/login');
+      }, 3000); //3초 후 페이지 이동
       
     } catch(err) { // 실패시 아래 에러 출력
       setError('회원가입 실패 : 아이디가 이미 존재하거나 서버 오류입니다.');

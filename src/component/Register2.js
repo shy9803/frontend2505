@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Register2 = () => {
   const [form, setForm] = useState({
@@ -13,7 +13,7 @@ const Register2 = () => {
 
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setForm({
@@ -40,10 +40,13 @@ const Register2 = () => {
         email: form.email
       });
 
-      setSuccess('회원가입이 완료되었습니다.');
+      setSuccess('회원가입이 완료되었습니다.\n3초 후에 로그인 페이지로 이동합니다.');
       setForm({username: '', password: '', password2: '', tel: '', email: ''});
 
-      // navigate('/login2');
+      setTimeout(() => {
+        navigate('/login2');
+      }, 3000); // 3초 후 페이지 이동
+
     } catch(err) {
       setError('회원가입 실패 : 아이디가 이미 존재하거나 서버 오류입니다.');
     }
