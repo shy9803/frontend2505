@@ -20,7 +20,7 @@ function BooksUpdate() {
   // 넘길 데이터 통신 성공/실패 출력
   useEffect(() => {
     axios
-    .get(`http://localhost:9070/books/${num}`)
+    .get(`https://port-0-backend-mbiobig1cd0dc4c0.sel4.cloudtype.app/books/${num}`)
     .then(res => {
       console.log('서버 응답값 : ', res.data);
       setForm(res.data);
@@ -41,7 +41,7 @@ function BooksUpdate() {
     e.preventDefault();
 
     axios
-    .put(`http://localhost:9070/books/update/${num}`, {
+    .put(`https://port-0-backend-mbiobig1cd0dc4c0.sel4.cloudtype.app/books/update/${num}`, {
       name: form.name,
       area1: form.area1,
       area2: form.area2,

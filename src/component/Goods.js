@@ -18,7 +18,7 @@ function Goods(props) {
     axios
     //DB에서 json데이터를 불러온다.
     .get('https://port-0-backend-mbiobig1cd0dc4c0.sel4.cloudtype.app/goods')
-      //('https://backend:9070/goods')
+    //('https://backend:9070/goods')
     //성공시 데이터를 변수에 저장
     .then(res=>{
       setData(res.data);
@@ -36,7 +36,7 @@ function Goods(props) {
   const deleteData = (g_code) => { //전달받은 g_code값을 가지고  backend로 넘김
     if (window.confirm('정말 삭제하시겠습니까?')) {
       axios //서버에 DELETE 요청 전송
-        .delete(`https://backend:9070/goods/${g_code}`)
+        .delete(`https://port-0-backend-mbiobig1cd0dc4c0.sel4.cloudtype.app/goods/${g_code}`)
         //성공일때 아래 내용 실행
         .then(() => {
           alert('삭제되었습니다.');

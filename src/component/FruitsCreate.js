@@ -27,7 +27,7 @@ const FruitsCreate = () => {
     e.preventDefault(); // 새로고침 방지
 
     // 택배를 포장하여 편의점에 맡긴다.
-    axios.post('http://localhost:9070/fruits', form) // 서버 측에 form 데이터 전송
+    axios.post('https://port-0-backend-mbiobig1cd0dc4c0.sel4.cloudtype.app/fruits', form) // 서버 측에 form 데이터 전송
     // 전송 성공시 실행할 내용
     .then(() => {
       alert('상품 등록이 완료되었습니다.');

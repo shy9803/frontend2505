@@ -33,7 +33,7 @@ const Register2 = () => {
       return;
     }
     try {
-      await axios.post('http://localhost:9070/register2', {
+      await axios.post('https://port-0-backend-mbiobig1cd0dc4c0.sel4.cloudtype.app/register2', {
         username: form.username,
         password: form.password,
         tel: form.tel,

@@ -28,7 +28,7 @@ function Books(props) {
   // 리스트 조회
   const loadData = () => {
     axios
-    .get('http://localhost:9070/books')
+    .get('https://port-0-backend-mbiobig1cd0dc4c0.sel4.cloudtype.app/books')
     .then(res => {
       setData(res.data);
       setBooksCount(res.data.length);
@@ -41,7 +41,7 @@ function Books(props) {
   const delData = (num) => {
     if(window.confirm('데이터를 삭제하시겠습니까?')) {
       axios
-      .delete(`http://localhost:9070/books/${num}`)
+      .delete(`https://port-0-backend-mbiobig1cd0dc4c0.sel4.cloudtype.app/books/${num}`)
       .then(() => {
         alert('삭제가 완료되었습니다.');
         loadData();

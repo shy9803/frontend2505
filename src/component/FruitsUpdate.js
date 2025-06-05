@@ -16,7 +16,7 @@ function FruitsUpdate(props) {
 
   useEffect(() => {
     axios
-    .get(`http://localhost:9070/fruits/${num}`)
+    .get(`https://port-0-backend-mbiobig1cd0dc4c0.sel4.cloudtype.app/fruits/${num}`)
     .then(res => {
       console.log('서버 응답값 : ', res.data);
       setForm(res.data);
@@ -35,7 +35,7 @@ function FruitsUpdate(props) {
     e.preventDefault();
 
     axios
-    .put(`http://localhost:9070/fruits/update/${num}`, {
+    .put(`https://port-0-backend-mbiobig1cd0dc4c0.sel4.cloudtype.app/fruits/update/${num}`, {
       name: form.name,
       price: form.price,
       color: form.color,

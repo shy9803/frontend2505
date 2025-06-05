@@ -43,7 +43,7 @@ function Fruits(props) {
     // React 비동기 통신
     axios
     // DB에서 json 데이터를 불러온다.
-    .get('http://localhost:9070/fruits')
+    .get('https://port-0-backend-mbiobig1cd0dc4c0.sel4.cloudtype.app/fruits')
     // 성공시 데이터를 변수에 저장
     .then(res => {
       setData(res.data);
@@ -61,7 +61,7 @@ function Fruits(props) {
   const delData = (num) => {
     if(window.confirm('데이터를 삭제하시겠습니까?')) {
       axios
-      .delete(`http://localhost:9070/fruits/${num}`)
+      .delete(`https://port-0-backend-mbiobig1cd0dc4c0.sel4.cloudtype.app/fruits/${num}`)
       .then(() => {
         alert('삭제가 완료되었습니다.');
         loadData(); // 데이터 삭제 후 목록을 다시 갱신해야 한다.

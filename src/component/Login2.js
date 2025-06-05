@@ -22,7 +22,7 @@ const Login2 = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post('http://localhost:9070/login', form);
+      const res = await axios.post('https://port-0-backend-mbiobig1cd0dc4c0.sel4.cloudtype.app/login', form);
 
       localStorage.setItem('token', res.data.token);
 

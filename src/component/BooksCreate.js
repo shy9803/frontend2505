@@ -28,7 +28,7 @@ function BooksCreate() {
     e.preventDefault();
 
     axios
-    .post('http://localhost:9070/books', form)
+    .post('https://port-0-backend-mbiobig1cd0dc4c0.sel4.cloudtype.app/books', form)
     .then(() => {
       alert('상품이 등록되었습니다.');
       navigate('/books');

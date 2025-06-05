@@ -36,7 +36,7 @@ const Question = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     try{ // 데이터 전송 성공시
-      await axios.post('http://localhost:9070/question', formData);
+      await axios.post('https://port-0-backend-mbiobig1cd0dc4c0.sel4.cloudtype.app/question', formData);
       alert('질문이 등록되었습니다.');
       setQuestionCount(count => count + 1); // 숫자 증가
 
