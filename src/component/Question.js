@@ -16,10 +16,18 @@ const Question = () => {
 
   const { setQuestionCount } = useContext(AlertContext);
 
+  // 글자수 제한 (개별 추가)
+  let [inputCount, setInputCount] = useState(0);
+
   // 2. 입력 양식에 사용자가 입력시 함수 호출
   const handleChange = (e) => {
     const{name, value} = e.target;
     setFormData(prev => ({...prev, [name]: value}));
+    
+    // 해당 구역에만 글자수 제한 체크
+    if(name === 'txtbox') {
+      setInputCount(value.length);
+    }
   }
 
   // 3. 입력 완료 or 전송하기 or send 버튼 클릭시 실행되는 함수
@@ -27,7 +35,7 @@ const Question = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     try{ // 데이터 전송 성공시
-      await axios.post('https://port-0-backend-mbiobig1cd0dc4c0.sel4.cloudtype.app/question', formData);
+      await axios.post('http://localhost:9070/question', formData);
       alert('질문이 등록되었습니다.');
       setQuestionCount(count => count + 1); // 숫자 증가
 
@@ -64,6 +72,9 @@ const Question = () => {
             <textarea rows='10' cols='50' name='txtbox' id='txtbox' placeholder='내용을 입력해주세요 (최대 300자)' value={formData.txtbox} onChange={handleChange} required 
             maxLength={300} // 300자 제한 추가
             ></textarea>
+            <div className='limit_txt'>
+              <p><span>{inputCount}</span> / 300 자</p>
+            </div>
           </div>
         </div>
 
@@ -81,3 +92,7 @@ const Question = () => {
 }
 
 export default Question;
+
+// 글자수 제한 참고 사이트
+// https://velog.io/@posinity/리액트-input-글자수-실시간-표시-글자수-제한-그-이상-못쓰게-하기
+// GPT 수정(해당 구역에만 글자수 제한 체크)
